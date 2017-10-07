@@ -1,0 +1,13 @@
+.vs/
+packages/
+GoodNoteEditor.Domain/bin/
+GoodNoteEditor.Domain/obj/
+GoodNoteEditor.UnitTests/bin/
+GoodNoteEditor.UnitTests/obj/
+GoodNoteEditor.WebUI/bin/
+GoodNoteEditor.WebUI/obj/
+GoodNoteEditor.WebUI/!log_all.txt
+GoodNoteEditor.WebUI/!log_debug.txt
+GoodNoteEditor.WebUI/!log_errors.txt
+Utils/Utils.Log.NLog/obj/
+Utils/Utils.Log/obj/

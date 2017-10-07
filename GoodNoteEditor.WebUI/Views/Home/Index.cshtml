@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        u { 
+            text-decoration: underline;
+            color: mediumblue;
+            cursor: pointer;
+                
+        }
+    </style>
+</head>
+<body>
+    <div id="bodyContainer" ng-app="GoodNoteApp" ng-controller="NotesScriptController" ng-init="loadNote(-1)">
+        <table>
+            <tr valign="top">
+                <td>
+                    <div>
+                        <div ng-hide="editing" ng-click="editing = true">
+                            {{note.Title}}
+                        </div>
+                        <div ng-hide="editing" ng-click="editing = true">
+                            {{note.Text}}
+                        </div>
+                        <form ng-show="editing">
+                            <label>Unique number: {{note.Id}}</label>
+                            <br><input type="text" ng-model="note.Title" placeholder="Name" ng-required />
+                            <br><textarea rows="10" ng-model="note.Text"></textarea>
+                            <br><label>Date: {{note.CreateDate | date:'medium'}}</label>
+                            <br />
+                            <button class="btn" ng-click="saveNote(note)">Save</button>
+                            <button class="btn" ng-click="removeNote(note)">Remove</button>
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <table>
+                            <tr>
+                                <td ng-click="loadNote(0)"><u> <i>new</i> </u></td>
+                            </tr>
+
+                            <tr ng-repeat="item in contents">
+                                <td ng-click="loadNote(item.Id)"><u> {{item.Id}} {{item.Title}} </u></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </td>
+            <tr>
+        </table>
+    </div>
+
+@* We use Cloudflare CDNjs server to load angular *@
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+@Scripts.Render("~/Scripts/Controllers/NotesScriptController.js")
+
+</body>
+</html>
