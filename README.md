@@ -1,4 +1,4 @@
-This reorgonized project is from the Pro ASP.NET MVC 5 by Adam Freeman called GoodNoteEditor
+This project is ASP.NET MVC 5 + Web API + Angular example called GoodNoteEditor
 
 Changinq list
 
@@ -11,11 +11,13 @@ Changinq list
 It's good point to start new web application. This template include this stack:
 
 * Asp.Net Mvc 5
+* Web Api
 * Entity Framefork 6
 * IoC (NInject)
 * Bootstrap v3.0
-* Unit tests (Microsoft)
-* Logging(NLog)
+* Angular
 * Jquery 1.10.2
+* Logging(NLog)
+
 
 
